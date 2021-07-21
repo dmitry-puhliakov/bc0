@@ -1,0 +1,52 @@
+.reviews {
+  &__gradient {
+    position: absolute;
+    top: 68px;
+    bottom: 0;
+    right: 0;
+    width: 13%;
+
+    background: linear-gradient(270deg, #fff 33%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+  }
+
+  &__title {
+    display: inline-block;
+    margin-left: 22px;
+    margin-right: 13px;
+  }
+
+  &__arrows {
+    display: inline-block;
+    margin-left: 22px;
+    margin-top: 22px;
+
+    @include onDesktop {
+      margin-top: 0;
+    }
+  }
+
+  &__arrow {
+    width: 28px;
+    height: 28px;
+
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    cursor: pointer;
+
+    &:disabled {
+      opacity: 0.35;
+    }
+
+    &--prev {
+      background-image: url(../images/prev.svg);
+    }
+
+    &--next {
+      margin-left: 14px;
+      background-image: url(../images/next.svg);
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.review {
+  max-width: 842px;
+
+  &__content {
+    display: flex;
+    padding: 30px 35px;
+    margin: 40px 0 22px 22px;
+    box-shadow: 0 4px 32px rgba(157, 169, 194, 0.24);
+    border-radius: 5px;
+
+    @include onDesktop {
+      padding-right: 140px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    width: 120px;
+    margin-right: 25px;
+    padding-right: 139px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 3px;
+      background: $c-secondary;
+      border-radius: 5px;
+    }
+  }
+
+  &__quotes {
+    width: 40px;
+    height: 30px;
+    margin-bottom: 9px;
+    background-image: url(../images/quotes.svg);
+    background-repeat: no-repeat;
+  }
+
+  &__text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+  }
+
+  &__paragraph {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
