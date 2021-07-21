@@ -39,6 +39,12 @@ new Splide(".splide", {
     right: "26.6%",
   },
 
+  breakpoints: {
+    768: {
+      padding: false,
+    }
+  },
+
   classes: {
     arrows: "splide__arrows reviews__arrows",
     arrow: "splide__arrow your-class-arrow",

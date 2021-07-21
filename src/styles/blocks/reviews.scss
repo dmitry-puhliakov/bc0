@@ -1,13 +1,20 @@
 .reviews {
   &__gradient {
-    position: absolute;
-    top: 68px;
-    bottom: 0;
-    right: 0;
-    width: 13%;
+    display: none;
 
-    background: linear-gradient(270deg, #fff 33%, rgba(255, 255, 255, 0) 100%);
-    z-index: 1;
+    @include onDesktop {
+      display: block;
+      position: absolute;
+      top: 68px;
+      bottom: 0;
+      right: 0;
+      width: 13%;
+
+      background: linear-gradient(
+        270deg, #fff 33%, rgba(255, 255, 255, 0) 100%
+      );
+      z-index: 1;
+    }
   }
 
   &__title {
